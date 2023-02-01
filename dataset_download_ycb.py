@@ -63,3 +63,18 @@ def download_file(url, filename):
         status = status + chr(8)*(len(status)+1)
         print(status)
     f.close()
+
+    def tgz_url(object, type):
+    """ Get the TGZ file URL for a particular object and dataset type """
+    if type in ["berkeley_rgbd", "berkeley_rgb_highres"]:
+        return base_url + "berkeley/{object}/{object}_{type}.tgz".format(object=object,type=type)
+    elif type in ["berkeley_processed"]:
+        return base_url + "berkeley/{object}/{object}_berkeley_meshes.tgz".format(object=object,type=type)
+    else:
+        return base_url + "google/{object}_{type}.tgz".format(object=object,type=type)
+
+    def extract_tgz(filename, dir):
+    """ Extract a TGZ file """
+    tar_command = "tar -xzf {filename} -C {dir}".format(filename=filename,dir=dir)
+    os.system(tar_command)
+    os.remove(filename)
