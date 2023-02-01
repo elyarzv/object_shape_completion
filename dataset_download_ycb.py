@@ -66,7 +66,7 @@ def download_file(url, filename):
         print(status)
     f.close()
 
-    def tgz_url(object, type):
+def tgz_url(object, type):
     """ Get the TGZ file URL for a particular object and dataset type """
     if type in ["berkeley_rgbd", "berkeley_rgb_highres"]:
         return base_url + "berkeley/{object}/{object}_{type}.tgz".format(object=object,type=type)
@@ -75,13 +75,13 @@ def download_file(url, filename):
     else:
         return base_url + "google/{object}_{type}.tgz".format(object=object,type=type)
 
-    def extract_tgz(filename, dir):
+def extract_tgz(filename, dir):
     """ Extract a TGZ file """
     tar_command = "tar -xzf {filename} -C {dir}".format(filename=filename,dir=dir)
     os.system(tar_command)
     os.remove(filename)
 
-    def check_url(url):
+def check_url(url):
     """ Check the validity of a URL """
     try:
         request = Request(url)
