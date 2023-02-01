@@ -1,5 +1,6 @@
 import os
 from urllib.request import Request, urlopen
+import json
 
 
 
@@ -37,4 +38,28 @@ if not os.path.exists(output_directory):
 # Defining a function to fetch the objects list from json file in the url
 def fetch_objects(url):
     response = urlopen(url)
-    print(response)
+    html = response.read()
+    objects = json.loads(html)
+    return objects["objects"]
+
+
+def download_file(url, filename):
+    """ Downloads files from a given URL """
+    u = urlopen(url)
+    f = open(filename,"wb")
+    file_size = int(u.getheader("Content-Length"))    
+    print("Downloading: {} ({} MB)".format(filename, file_size/1000000.0))
+
+    file_size_dl = 0
+    block_sz = 65536
+    while True:
+        buffer = u.read(block_sz)
+        if not buffer:
+            break
+
+        file_size_dl += len(buffer)
+        f.write(buffer)
+        status = r"%10d  [%3.2f%%]" % (file_size_dl/1000000.0, file_size_dl * 100. / file_size)
+        status = status + chr(8)*(len(status)+1)
+        print(status)
+    f.close()
