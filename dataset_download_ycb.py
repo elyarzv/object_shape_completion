@@ -1,6 +1,8 @@
 import os
 from urllib.request import Request, urlopen
 import json
+import urllib
+import sys
 
 
 
@@ -78,3 +80,34 @@ def download_file(url, filename):
     tar_command = "tar -xzf {filename} -C {dir}".format(filename=filename,dir=dir)
     os.system(tar_command)
     os.remove(filename)
+
+    def check_url(url):
+    """ Check the validity of a URL """
+    try:
+        request = Request(url)
+        request.get_method = lambda : 'HEAD'
+        response = urlopen(request)
+        return True
+    except Exception as e:
+        return False
+
+
+if __name__ == "__main__":
+
+    # Grab all the object information
+    objects = fetch_objects(objects_url)
+
+    # Download each object for all objects and types specified
+    for object in objects:
+        if objects_to_download == "all" or object in objects_to_download:
+            for file_type in files_to_download:
+                url = tgz_url(object, file_type)
+                if not check_url(url):
+                    continue
+                filename = "{path}/{object}_{file_type}.tgz".format(
+                    path=output_directory,
+                    object=object,
+                    file_type=file_type)
+                download_file(url, filename)
+                if extract:
+                    extract_tgz(filename, output_directory)
