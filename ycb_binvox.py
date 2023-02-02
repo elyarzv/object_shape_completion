@@ -12,7 +12,7 @@ if not os.path.exists(output_directory):
 def obj2binvox(input_path, file_name, ext, output_path):
     if not os.path.exists(output_path):
         os.makedirs(output_path)
-    command = "./binvox -d 100 " + input_path + file_name + ext
+    command = "./binvox -d 256 " + input_path + file_name + ext
     print(command)
     print("converting" + input_path + "to" + output_path + file_name)
     if (os.system(command) ==0):
@@ -31,9 +31,4 @@ for folder_name in os.listdir(root_dir):
                 file_name, ext = os.path.splitext(file)  
                 output_folder_path = os.path.join(output_directory,folder_name)
                 obj2binvox(folder_path + "/google_64k/", file_name, ext, output_folder_path)
-    if os.path.isdir(output_folder_path):
-        if not os.path.exists(output_folder_path):
-            os.makedirs(output_folder)
-        for file_name in os.listdir(folder_path):
-            file_path = os.path.join(folder_path, file_name)
-            # do something with file_path
+   
