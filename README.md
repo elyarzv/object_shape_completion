@@ -1,7 +1,5 @@
 # object_shape_completion
-My goal in this repository is to train a network to complete the shape of an object with a single shot RGB-D image.
-
-Later on this repository will be used to grasp the object and another network will use the output of this repository to generate highly accurate grasp samples.
+This repository aims to train a neural network to complete the shape of objects using a single shot RGB-D image. The ultimate goal is to use the output of this network as input for another network, which will generate highly accurate grasp samples for grasping the objects.
 
 ## Downloading YCB data
 The dataset_download_ycb.py file is created to download the dataset.
