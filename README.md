@@ -16,4 +16,4 @@ The converted files will be stored in corresponding folder inside models/binvox_
 The created binvox files can be viewed by the viewvox execution file. 
 For example to view the binvox file /models/binvox_files/002_master_chef_can/textured.binvox the following command should be run:
 
-'''./viewvox /models/binvox_files/002_master_chef_can/textured.binvox '''
+`./viewvox /models/binvox_files/002_master_chef_can/textured.binvox `
