@@ -1,5 +1,5 @@
 #ignoring dataset from being pushed to the repository
-**/models/
+models/**
 
 #ignoring python cache from being pushed to the repository
 __pycache__/
