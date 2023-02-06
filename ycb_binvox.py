@@ -23,15 +23,15 @@ def obj2binvox(input_path, file_name, ext, output_path):
 
     # adding each model's path to assets list for isaac replicator
     with open(assets_file, "a") as file:
-        file.write(file_path + "\n")
+        file.write("*/"+ file_path + "\n")
 
     # converting .obj files to .binvox files
     # and moving them to the corresponding folder in /models/binvox_files
-    # command = "./binvox -d 256 " + file_path
-    # print(command)
-    # print("converting" + input_path + "to" + output_path + file_name)
-    # if (os.system(command) ==0):
-    #     shutil.move(input_path + file_name + ".binvox", output_path)
+    command = "./binvox -d 256 " + file_path
+    print(command)
+    print("converting" + input_path + "to" + output_path + file_name)
+    if (os.system(command) ==0):
+        shutil.move(input_path + file_name + ".binvox", output_path)
 
 
 # specify the directory containing the folders
