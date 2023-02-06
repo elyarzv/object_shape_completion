@@ -17,7 +17,7 @@ For example to view the binvox file models/binvox_files/002_master_chef_can/text
 `./viewvox models/binvox_files/002_master_chef_can/textured.binvox `
 
 ## Generating dataset in IsaacSim
-Isaac Sim Replicator just accepts .usd files to import and synthesize data out of them. So we need to convert textured .obj objects to .usd files. The **asset_converter.py** file is written to convert those files. I have tried to explain details by comments inside this python script. The only thing which is very important is that this python scripts needs Isaac SDKs. One can either install Isaac SDKs or run this script from Isaac Omniverse api which already has Isaad SDKs installed.
+Isaac Sim Replicator just accepts .usd files to import and synthesize data out of them. So we need to convert textured .obj objects to .usd files. The *asset_converter.py* file is written to convert those files. I have tried to explain details by comments inside this python script. The only thing which is very important is that this python scripts needs Isaac SDKs. One can either install Isaac SDKs or run this script from Isaac Omniverse api which already has Isaad SDKs installed.
 
 [def]: https://www.patrickmin.com/binvox/
 [def2]: https://www.patrickmin.com/viewvox/
