@@ -1,11 +1,12 @@
 # dropped warehouse objects
 objects:
-  obj_model: Choice(["assets/models/warehouse.txt"])
+  obj_model: Choice(["*/isaac_sim/assets/models/ycb.txt"])
+  # obj_model: Choice(["assets/models/warehouse.txt"])
 
-  obj_count: Range(5, 15)
+  obj_count: 1
 
   obj_size_enabled: False
-  obj_scale: Uniform(0.75, 1.25)
+  obj_scale: 1
 
   obj_vert_fov_loc: Uniform(0, 0.5)  
   obj_distance: Uniform(3, 5)
