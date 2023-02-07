@@ -77,7 +77,7 @@ if __name__ == "__main__":
     kit = SimulationApp()
 
     # specify the directory containing the folders
-    models_dir = root_dir + "models/ycb_copy/"
+    models_dir = root_dir + "models/ycb/"
 
     # loop through each folder in the directory
     # and call converter function to convert obj file to usd one
