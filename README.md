@@ -12,9 +12,13 @@ The converted files will be stored in corresponding folder inside models/binvox_
 
 ### Viewing binvox files
 The created binvox files can be viewed by the [viewvox][def2] execution file. 
-For example to view the binvox file models/binvox_files/002_master_chef_can/textured.binvox the following command should be run:
+For example to view the binvox file models/binvox_files/025_mug/textured.binvox the following command should be run:
 
-`./viewvox models/binvox_files/002_master_chef_can/textured.binvox `
+`./viewvox models/binvox_files/025_mug/textured.binvox `
+
+And the result would be like the following image:
+
+![Viewvox window showing mug binvox file](images/viewvox.png)
 
 ## Generating dataset in IsaacSim
 Isaac Sim Replicator just accepts .usd files to import and synthesize data out of them. So we need to convert textured .obj objects to .usd files. The *asset_converter.py* file is written to convert those files. I have tried to explain details by comments inside this python script. The only thing which is very important is that this python scripts needs Isaac SDKs. One can either install Isaac SDKs or run this script from Isaac Omniverse api which already has Isaad SDKs installed.
