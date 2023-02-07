@@ -27,7 +27,7 @@ Isaac Sim Replicator just accepts .usd files to import and synthesize data out o
 To do it just install Nvidia Omniverse and also Isaac Sim, then Launch the Isaac Sim in Omniverse and in the next window select *"Open in Terminal"* as shown in the following image:
 
 <p align="center">
-  <img src="images/IsaacSimHeadless.png" width="70%" height="70%">
+  <img src="images/IsaacSimHeadless.png" width="90%" height="90%">
 </p>
 
 [def]: https://www.patrickmin.com/binvox/
