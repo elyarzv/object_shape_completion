@@ -19,7 +19,7 @@ For example to view the binvox file models/binvox_files/025_mug/textured.binvox 
 And the result would be like the following image:
 
 <p align="center">
-  <img src="images/viewvox.png" width="60%" height="60%">
+  <img src="images/viewvox.png" width="50%" height="50%">
 </p>
 
 ## Generating dataset in IsaacSim
