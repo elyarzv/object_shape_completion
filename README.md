@@ -24,6 +24,11 @@ And the result would be like the following image:
 
 ## Generating dataset in IsaacSim
 Isaac Sim Replicator just accepts .usd files to import and synthesize data out of them. So we need to convert textured .obj objects to .usd files. The *asset_converter.py* file is written to convert those files. I have tried to explain details by comments inside this python script. The only thing which is very important is that this python scripts needs Isaac SDKs. One can either install Isaac SDKs or run this script from Isaac Omniverse api which already has Isaad SDKs installed.
+To do it just install Nvidia Omniverse and also Isaac Sim, then Launch the Isaac Sim in Omniverse and in the next window select *"Open in Terminal"* as shown in the following image:
+
+<p align="center">
+  <img src="images/IsaacSimHeadless.png" width="70%" height="70%">
+</p>
 
 [def]: https://www.patrickmin.com/binvox/
 [def2]: https://www.patrickmin.com/viewvox/
